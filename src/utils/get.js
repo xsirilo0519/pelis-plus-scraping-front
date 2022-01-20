@@ -1,17 +1,18 @@
 import axios from 'axios'
-import { CoursesLoading, CoursesLoadSucces, CoursesLoadError } from '../actions/CoursesActions'
+import { PelisLoading, PelisLoadSucces, PelisLoadError } from '../actions/CoursesActions'
 
 export const getCourse = (id) => (dispatch) => {
-  dispatch(CoursesLoading())
+  dispatch(PelisLoading())
 
   const options = {
     method: 'GET',
-    url: `http://localhost:8080/api/course/${id}`
+    url: `http://localhost:8080/api/cartelera/${id}`
   }
 
   axios.request(options).then(function (response) {
-    dispatch(CoursesLoadSucces(response.data))
+    console.log("info",response.data);
+    dispatch(PelisLoadSucces(response.data[0]))
   }).catch(function (error) {
-    dispatch(CoursesLoadError(error))
+    dispatch(PelisLoadError(error))
   })
 }

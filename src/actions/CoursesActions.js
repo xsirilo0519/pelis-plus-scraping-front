@@ -1,21 +1,21 @@
-import actionsTypesCourses from './actionsTypes/ActionsTypeMyQuestions'
+import actionsTypesPelis from './actionsTypes/ActionsTypePelis'
 
-export const CoursesLoading = () => {
+export const PelisLoading = () => {
   return {
-    type: actionsTypesCourses.LOADING_SUCCESS_COURSES
+    type: actionsTypesPelis.LOADING_SUCCESS_PELIS
   }
 }
 
-export const CoursesLoadSucces = (questions) => {
+export const PelisLoadSucces = (cartelera) => {
   return {
-    type: actionsTypesCourses.LOAD_SUCCESS_COURSES,
-    payload: questions
+    type: actionsTypesPelis.LOAD_SUCCESS_PELIS,
+    payload: cartelera
   }
 }
 
-export const CoursesLoadError = (error) => {
+export const PelisLoadError = (error) => {
   return {
-    type: actionsTypesCourses.LOAD_FAILURE_COURSES,
+    type: actionsTypesPelis.LOAD_FAILURE_PELIS,
     payload: error
   }
 }

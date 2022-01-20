@@ -1,0 +1,7 @@
+const actionsTypesCourses = {
+  LOADING_SUCCESS_PELIS: 'LOADING_SUCCESS_PELIS',
+  LOAD_SUCCESS_PELIS: 'LOAD_SUCCESS_PELIS',
+  LOAD_FAILURE_PELIS: 'LOAD_FAILURE_PELIS',
+}
+
+export default actionsTypesCourses

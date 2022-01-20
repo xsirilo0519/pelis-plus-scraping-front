@@ -1,0 +1,27 @@
+.card{
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    border: solid black 2px;
+    padding: 10px;
+}
+
+.categoria{
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.btn-detalle{
+    border: solid black 2px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: aqua;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.descripcion{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
