@@ -3,6 +3,7 @@ import { getCourse } from './utils/get'
 import { useDispatch,useSelector } from 'react-redux'
 import Modal from './utils/Modal'
 import Cards from './components/Cards'
+import { list } from 'postcss'
 function App () {
       const {
         isLoading,
@@ -23,7 +24,7 @@ function App () {
     const socket = new WebSocket('ws://' + 'localhost:8080' + '/retrieve/' + '456')
     socket.onmessage = function (m) {
       const data = JSON.parse(m.data)
-      console.log(data);
+      dispatch(getCourse('789'))
       console.log('Got message: ' + data.type)
     }
   }, [])
